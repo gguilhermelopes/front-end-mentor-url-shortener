@@ -1,0 +1,77 @@
+.mainTitleWrapper {
+  padding: 4rem 0;
+  display: grid;
+  margin-right: 0;
+  background-image: url("../../Images/illustration-working.svg");
+  background-size: contain;
+  background-position: 90%;
+  background-repeat: no-repeat;
+}
+
+.mainTitleWrapper h1 {
+  font-weight: 700;
+  font-size: 4.1rem;
+  color: var(--very-dark-blue);
+  line-height: 1.1;
+  max-width: 15ch;
+}
+
+.mainTitleWrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--grayish-violet);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 40ch;
+}
+
+.mainTitleWrapper button {
+  font-size: 1.125rem;
+}
+
+.illustration {
+  overflow: hidden;
+  width: auto;
+  height: 300px;
+  background-image: url("../../Images/illustration-working.svg");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1500px) {
+  .mainTitleWrapper {
+    background-position: 115%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .mainTitleWrapper {
+    background-position: 160%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .mainTitleWrapper {
+    padding: 1.5rem 0;
+    background: none;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainTitleWrapper {
+    text-align: center;
+  }
+
+  .mainTitleWrapper h1 {
+    font-size: 2.5rem;
+    max-width: initial;
+    margin-bottom: 1rem;
+  }
+
+  .mainTitleWrapper h3 {
+    font-size: 1rem;
+    max-width: initial;
+  }
+}

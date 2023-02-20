@@ -1,0 +1,43 @@
+.mainSection {
+  margin-top: 4rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  gap: 1rem;
+  background-image: url("../../Images/bg-shorten-desktop.svg");
+  background-color: var(--dark-violet);
+}
+
+.form label {
+  flex: 1;
+}
+
+.form input {
+  padding: 1rem 2rem;
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--very-dark-blue);
+}
+
+.form input:hover,
+.form input:focus {
+  outline: none;
+  border-color: var(--grayish-violet);
+}
+
+.form input::placeholder {
+  color: var(--grayish-violet);
+}
+
+.form button {
+  padding: 1.125rem 2.075rem;
+  border-radius: 0.5rem;
+}
