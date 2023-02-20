@@ -10,7 +10,7 @@ const App = () => {
       <main>
         <MainTitle
           title="More than just shorter links"
-          subtitle="  Build your brand's recognition and get detailed insights
+          subtitle="Build your brand's recognition and get detailed insights
   on how your links are performing."
         />
         <Main />

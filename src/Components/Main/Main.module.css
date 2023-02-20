@@ -1,3 +1,8 @@
+.mainSectionWrapper {
+  background-color: #ebeaed;
+  box-shadow: inset 0px 4rem 0px 0px white;
+}
+
 .mainSection {
   margin-top: 4rem;
 }
@@ -40,4 +45,79 @@
 .form button {
   padding: 1.125rem 2.075rem;
   border-radius: 0.5rem;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.linkList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background-color: white;
+  color: var(--very-dark-violet);
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.linkList li span {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--cyan);
+}
+
+.linkList li span button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .mainSection {
+    margin-top: 2rem;
+  }
+  .linkList li {
+    align-items: flex-start;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .linkList li span {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .form {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 2rem;
+      background-image: url("../../Images/bg-shorten-mobile.svg") top top;
+    }
+
+    .form label,
+    .form button {
+      width: 100%;
+    }
+    .linkList li {
+      flex-direction: column;
+    }
+
+    .linkList li span {
+      display: block;
+      width: 100%;
+      padding-top: 1rem;
+      border-top: 1px solid #ebeaed;
+    }
+    .linkList li span button {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
 }
