@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../Helpers/Button";
 import Input from "../Helpers/Input";
+import Loading from "../Helpers/Loading";
 import styles from "./Main.module.css";
 import MainGetStarted from "./MainGetStarted";
 import MainStatistics from "./MainStatistics";
@@ -25,7 +26,7 @@ const Main = () => {
       setLoading(false);
       if (response.ok) {
         setError("");
-        if (data.length < 3) {
+        if (data.length < 4) {
           setData([
             {
               originalLink: json.result.original_link,
@@ -58,7 +59,6 @@ const Main = () => {
   function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
     fetchData(`https://api.shrtco.de/v2/shorten?url=${linkValue}`);
-    setLinkValue("");
   }
 
   return (
@@ -82,12 +82,22 @@ const Main = () => {
           />
         </form>
         <ul className={styles.linkList}>
+          {loading && <Loading />}
           {data &&
-            data.map((item) => (
-              <li key={item.code}>
+            data.map((item, index) => (
+              <li key={index}>
                 {item.originalLink}
                 <span>
-                  {item.shortLink} <Button content="Copy" />
+                  {item.shortLink}
+                  <Button
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                      const target = event.target as HTMLElement;
+                      target.style.backgroundColor = "hsl(257, 27%, 26%)";
+                      target.innerText = "Copied!";
+                      navigator.clipboard.writeText(item.shortLink);
+                    }}
+                    content="Copy"
+                  />
                 </span>
               </li>
             ))}
