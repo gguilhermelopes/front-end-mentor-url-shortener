@@ -61,6 +61,16 @@ const Main = () => {
     fetchData(`https://api.shrtco.de/v2/shorten?url=${linkValue}`);
   }
 
+  function changeButtonStyle(element: HTMLElement) {
+    element.style.backgroundColor = "hsl(257, 27%, 26%)";
+    element.innerText = "Copied!";
+  }
+
+  function resetButtonStyle(element: HTMLElement) {
+    element.style.backgroundColor = "var(--cyan)";
+    element.innerText = "Copy";
+  }
+
   return (
     <div className={styles.mainSectionWrapper}>
       <section className={`${styles.mainSection} container`}>
@@ -92,9 +102,12 @@ const Main = () => {
                   <Button
                     onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
                       const target = event.target as HTMLElement;
-                      target.style.backgroundColor = "hsl(257, 27%, 26%)";
-                      target.innerText = "Copied!";
-                      navigator.clipboard.writeText(item.shortLink);
+                      navigator.clipboard.writeText(item.shortLink).then(() => {
+                        changeButtonStyle(target);
+                        setTimeout(() => {
+                          resetButtonStyle(target);
+                        }, 3000);
+                      });
                     }}
                     content="Copy"
                   />

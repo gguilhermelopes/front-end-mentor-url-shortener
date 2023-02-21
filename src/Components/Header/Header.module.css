@@ -105,7 +105,9 @@
 
 .mobileButton::after {
   content: "";
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.2rem;
   height: 2px;
   border-radius: 2px;
