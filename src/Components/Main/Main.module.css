@@ -32,6 +32,16 @@
   color: var(--very-dark-blue);
 }
 
+.form label span {
+  display: block;
+  color: var(--red);
+  margin-top: 1rem;
+}
+
+:global(input.error) {
+  border-color: var(--red);
+}
+
 .form input:hover,
 .form input:focus {
   outline: none;
@@ -45,6 +55,7 @@
 .form button {
   padding: 1.125rem 2.075rem;
   border-radius: 0.5rem;
+  align-self: flex-start;
 }
 
 .linkList {

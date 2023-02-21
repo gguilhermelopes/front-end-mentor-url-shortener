@@ -16,3 +16,8 @@
   background-color: #21a5a5;
   outline: none;
 }
+
+.button:disabled {
+  background-color: var(--gray);
+  cursor: no-drop;
+}
