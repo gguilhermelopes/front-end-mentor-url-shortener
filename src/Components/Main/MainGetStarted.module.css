@@ -1,0 +1,27 @@
+.getStartedWrapper {
+  background-image: url("../../Images/bg-boost-desktop.svg");
+  background-color: var(--dark-violet);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.getStartedWrapper h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .getStartedWrapper {
+    margin-top: 2rem;
+    background-image: url("../../Images/bg-boost-mobile.svg");
+  }
+  .getStartedWrapper h1 {
+    font-size: 1.5rem;
+  }
+}

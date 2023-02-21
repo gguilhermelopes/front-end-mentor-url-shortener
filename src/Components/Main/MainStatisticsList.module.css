@@ -53,12 +53,12 @@
   .listItem:nth-child(3) {
     margin-top: 0rem;
   }
-  .listItem h2 {
-    margin-top: 2rem;
-  }
 }
 
 @media (max-width: 600px) {
+  .listItem h2 {
+    margin-top: 2rem;
+  }
   .listItem .svg {
     right: calc(72vw / 2);
   }

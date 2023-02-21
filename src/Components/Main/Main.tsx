@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../Helpers/Button";
 import Input from "../Helpers/Input";
 import styles from "./Main.module.css";
+import MainGetStarted from "./MainGetStarted";
 import MainStatistics from "./MainStatistics";
 
 const Main = () => {
@@ -43,6 +44,7 @@ const Main = () => {
         </ul>
       </section>
       <MainStatistics />
+      <MainGetStarted />
     </div>
   );
 };

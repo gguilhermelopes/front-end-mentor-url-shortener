@@ -2,6 +2,7 @@ import Header from "./Components/Header/Header";
 import "./App.css";
 import MainTitle from "./Components/Main/MainTitle";
 import Main from "./Components/Main/Main";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         />
         <Main />
       </main>
+      <Footer />
     </>
   );
 };
